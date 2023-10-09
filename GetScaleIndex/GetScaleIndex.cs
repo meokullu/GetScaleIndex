@@ -1,42 +1,45 @@
-﻿using System.Runtime.InteropServices;
-
-namespace GetScaleIndex
+﻿namespace GetScaleIndex
 {
     /// <summary>
-    /// 
+    /// Scaling integers
     /// </summary>
     public class GetScaleIndex
     {
+        // Height
         private static int s_height;
+
+        // Width
         private static int s_width;
 
         /// <summary>
-        /// 
+        /// Set width that will be used for scaling.
         /// </summary>
-        /// <param name="height"></param>
+        /// <param name="height">Height of matrix.</param>
         public static void SetHeight(int height)
         {
+            // Set height parameter.
             s_height = height;
         }
 
         /// <summary>
-        /// 
+        /// Set height that will be used for scaling.
         /// </summary>
-        /// <param name="width"></param>
+        /// <param name="width">Width of matrix.</param>
         public static void SetWidth(int width)
         {
+            // Set width parameter.
             s_width = width;
         }
 
         /// <summary>
-        /// 
+        /// Experimental method. [Do not use!]
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">Index position of array.</param>
+        /// <returns>Integer array.</returns>
         public static int[] GetIndexFor4x(int index)
         {
             //
-            int offset = (index / s_width) * 2 * s_height + (index * 2);
+            int offset = (index / s_width * 2 * s_height) + (index * 2);
 
             //
             int[] list = new int[4];
@@ -51,7 +54,7 @@ namespace GetScaleIndex
                 for (int j = 0; j < s_width - 1; j++)
                 {
                     //
-                    list[innerIndex] = (2 * s_height * i) + (offset + j);
+                    list[innerIndex] = (2 * s_height * i) + offset + j;
 
                     //
                     innerIndex++;
@@ -62,10 +65,10 @@ namespace GetScaleIndex
         }
 
         /// <summary>
-        /// 
+        /// Experimental method. [Do not use!]
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">Index position of array.</param>
+        /// <returns>Integer array.</returns>
         public static int[] GetScalingIndexFor9X(int index)
         {
             //
@@ -91,10 +94,10 @@ namespace GetScaleIndex
         }
 
         /// <summary>
-        /// 
+        /// Experimental method. [Do not use!]
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">Index position of array.</param>
+        /// <returns>Integer array.</returns>
         public static int[] GetScalingIndexFor16X(int index)
         {
             //
@@ -128,10 +131,10 @@ namespace GetScaleIndex
         }
 
         /// <summary>
-        /// 
+        /// Experimental method. [Do not use!]
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">Index position of array.</param>
+        /// <returns>Integer array.</returns>
         public static int[] GetScalingIndexFor25X(int index)
         {
             //
@@ -175,10 +178,10 @@ namespace GetScaleIndex
         }
 
         /// <summary>
-        /// 
+        /// Experimental method. [Do not use!]
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">Index position of array.</param>
+        /// <returns>Integer array.</returns>
         public static int[] GetScalingIndexFor36X(int index)
         {
             //
@@ -241,13 +244,13 @@ namespace GetScaleIndex
         }
 
         /// <summary>
-        /// 
+        /// Experimental method. [Do not use!]
         /// </summary>
-        /// <param name="index"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        /// <param name="customScale"></param>
-        /// <returns></returns>
+        /// <param name="index">Index position of array.</param>
+        /// <param name="width">Width of matrix.</param>
+        /// <param name="height">Height of matrix.</param>
+        /// <param name="customScale">Scaling</param>
+        /// <returns>Integer array.</returns>
         public static int[] GetCustomScalingIndex(int index, int width, int height, int customScale)
         {
             //
@@ -266,7 +269,7 @@ namespace GetScaleIndex
                 for (int j = 0; j < customScale; j++)
                 {
                     // i: Vertical shift. j: Horizontally shift.
-                    list[innerIndex] = (adding + (i * customScale * height) + j);
+                    list[innerIndex] = adding + (i * customScale * height) + j;
 
                     //
                     innerIndex++;
