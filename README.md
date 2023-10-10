@@ -34,6 +34,9 @@ GetCustomScalingIndex(int index, int width, int height, int customScale)
 
 ## Version History
 
+* 1.0.0-alpha.2
+	* Added minimum value checking into SetHeight() and SetWidth() methods. 
+
 * 1.0.0-alpha.1
 	* Added licence file.
 	* Readme file is filled.
