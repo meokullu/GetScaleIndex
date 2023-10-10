@@ -1,4 +1,6 @@
-﻿namespace GetScaleIndex
+﻿using System;
+
+namespace GetScaleIndex
 {
     /// <summary>
     /// Scaling integers
@@ -17,6 +19,15 @@
         /// <param name="height">Height of matrix.</param>
         public static void SetHeight(int height)
         {
+            //TODO: Value should ve indicated as two or more.
+
+            // Checking if value is below two.
+            if (height < 2)
+            {
+                // Throwing an argument to indicate value must be two or higher.
+                throw new ArgumentException("height should be more than 2");
+            }
+
             // Set height parameter.
             s_height = height;
         }
@@ -27,6 +38,15 @@
         /// <param name="width">Width of matrix.</param>
         public static void SetWidth(int width)
         {
+            //TODO: Value should ve indicated as two or more.
+
+            // Checking if value is below two.
+            if (width < 2)
+            {
+                // Throwing an argument to indicate value must be two or higher.
+                throw new ArgumentException("width should be more than 2");
+            }
+
             // Set width parameter.
             s_width = width;
         }
@@ -106,27 +126,32 @@
             //
             int[] list = new int[16]
             {
+                //
                 adding,
                 adding + 1,
                 adding + 2,
                 adding + 3,
 
+                //
                 adding + (4 * s_height),
                 adding + (4 * s_height) + 1,
                 adding + (4 * s_height) + 2,
                 adding + (4 * s_height) + 3,
 
+                //
                 adding + (8 * s_height),
                 adding + (8 * s_height) + 1,
                 adding + (8 * s_height) + 2,
                 adding + (8 * s_height) + 3,
 
+                //
                 adding + (12 * s_height),
                 adding + (12 * s_height) + 1,
                 adding + (12 * s_height) + 2,
                 adding + (12 * s_height) + 3,
             };
 
+            //
             return list;
         }
 
@@ -143,30 +168,35 @@
             //
             int[] list = new int[25]
             {
+                //
                 adding,
                 adding + 1,
                 adding + 2,
                 adding + 3,
                 adding + 4,
 
+                //
                 adding + (5 * s_height),
                 adding + (5 * s_height) + 1,
                 adding + (5 * s_height) + 2,
                 adding + (5 * s_height) + 3,
                 adding + (5 * s_height) + 4,
 
+                //
                 adding + (10 * s_height),
                 adding + (10 * s_height) + 1,
                 adding + (10 * s_height) + 2,
                 adding + (10 * s_height) + 3,
                 adding + (10 * s_height) + 4,
 
+                //
                 adding + (15 * s_height),
                 adding + (15 * s_height) + 1,
                 adding + (15 * s_height) + 2,
                 adding + (15 * s_height) + 3,
                 adding + (15 * s_height) + 4,
 
+                //
                 adding + (20 * s_height),
                 adding + (20 * s_height) + 1,
                 adding + (20 * s_height) + 2,
@@ -174,6 +204,7 @@
                 adding + (20 * s_height) + 4,
             };
 
+            //
             return list;
         }
 
