@@ -1,10 +1,13 @@
-# GetScaleIndex
+## GetScaleIndex
 
 GetScaleIndex is a package to scale index position.
 
-## Description
+[Download alpha version on NuGet gallery](https://www.nuget.org/packages/GetScaleIndex/)
 
-## Listed Methods
+
+### Description
+
+### Example Usage
 ```
 SetHeight(int height)
 ```
@@ -30,35 +33,21 @@ GetIndexFor36X(int index)
 GetCustomScalingIndex(int index, int width, int height, int customScale)
 ```
 
-## Example Usage
+### Version History
+See changelog 'link'
 
-## Version History
-
-* 1.0.0-alpha.2
-	* Added minimum value checking into SetHeight() and SetWidth() methods. 
-
-* 1.0.0-alpha.1
-	* Added licence file.
-	* Readme file is filled.
-	* Added multi-target framework support added.
-	* Added summaries into methods.
-	* Icons are added for package and file.
-
-* 1.0.0-alpha
-	* Initial release. 
-
-## Task list
+### Task list
 - [ ] Test methods.
 - [ ] Using static values on calculations
 
-### Known bugs
+#### Known bugs
 * Scaling doesn't work with rectangle with different height and width.
 
-## Licence
+### Licence
 [MIT license](https://github.com/meokullu/GetScaleIndex/blob/master/LICENSE)
 
-## Authors
+### Authors
 Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
 
-## Help
+### Help
 Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
