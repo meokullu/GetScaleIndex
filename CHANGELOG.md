@@ -1,4 +1,4 @@
-## Changelog
+## GetScaleIndex Changelog
 
 <!--
 ## [Unreleased]
@@ -9,6 +9,9 @@
 
 ### Removed
 -->
+
+## [1.0.0-alpha.x] (Upcoming)
+*
 
 ## [1.0.0-alpha.3]
 
