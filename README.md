@@ -4,7 +4,6 @@ GetScaleIndex is a package to scale index position.
 
 [Download alpha version on NuGet gallery](https://www.nuget.org/packages/GetScaleIndex/)
 
-
 ### Description
 
 ### Example Usage
@@ -34,14 +33,10 @@ GetCustomScalingIndex(int index, int width, int height, int customScale)
 ```
 
 ### Version History
-See changelog 'link'
+See [Changelog](https://github.com/meokullu/GetScaleIndex/blob/master/CHANGELOG.md)
 
 ### Task list
-- [ ] Test methods.
-- [ ] Using static values on calculations
-
-#### Known bugs
-* Scaling doesn't work with rectangle with different height and width.
+* Create an issue or check task list: [Issues](https://github.com/meokullu/GetScaleIndex/issues)
 
 ### Licence
 [MIT license](https://github.com/meokullu/GetScaleIndex/blob/master/LICENSE)
