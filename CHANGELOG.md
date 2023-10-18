@@ -10,13 +10,12 @@
 ### Removed
 -->
 
-## [1.0.0-alpha.x] (Upcoming)
-*
-
 ## [1.0.0-alpha.3]
 
 ### Added
-* Added changelog.
+* Added CHANGELOG.
+* Added Nuget download link on README.
+* Added CHANGELOG link under Version History on README.
 
 ## [1.0.0-alpha.2]
 
