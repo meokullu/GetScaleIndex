@@ -1,35 +1,36 @@
 ## GetScaleIndex Changelog
+[![GetScaleIndex](https://img.shields.io/nuget/v/GetScaleIndex.svg)](https://www.nuget.org/packages/GetScaleIndex/)
 
 <!--
-## [Unreleased]
+### [Unreleased]
 
-### Added
+#### Added
 
-### Changed
+#### Changed
 
-### Removed
+#### Removed
 -->
 
-## [1.0.0-alpha.3]
+### [1.0.0-alpha.3]
 
-### Added
+#### Added
 * Added CHANGELOG.
 * Added Nuget download link on README.
 * Added CHANGELOG link under Version History on README.
 
-## [1.0.0-alpha.2]
+### [1.0.0-alpha.2]
 
-### Added
+#### Added
 * Added minimum value checking into `SetHeight()` and `SetWidth()` methods. 
 
-## [1.0.0-alpha.1]
+### [1.0.0-alpha.1]
 
-### Added
+#### Added
 * Added licence file.
 * Readme file is filled.
 * Added multi-target framework support added.
 * Added summaries into methods.
 * Icons are added for package and file.
 
-## [1.0.0-alpha]
+### [1.0.0-alpha]
 * Initial release. 
