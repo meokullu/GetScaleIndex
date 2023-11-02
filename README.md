@@ -1,4 +1,5 @@
 ## GetScaleIndex
+[![GetScaleIndex](https://img.shields.io/nuget/v/GetScaleIndex.svg)](https://www.nuget.org/packages/GetScaleIndex/) [![GetScaleIndex](https://img.shields.io/nuget/dt/GetScaleIndex.svg)](https://www.nuget.org/packages/GetScaleIndex/) [![License](https://img.shields.io/github/license/meokullu/GetScaleIndex.svg)](https://github.com/meokullu/GetScaleIndex/blob/master/LICENSE)
 
 GetScaleIndex is a package to scale index position.
 
@@ -39,10 +40,13 @@ See [Changelog](https://github.com/meokullu/GetScaleIndex/blob/master/CHANGELOG.
 * Create an issue or check task list: [Issues](https://github.com/meokullu/GetScaleIndex/issues)
 
 ### Licence
-[MIT license](https://github.com/meokullu/GetScaleIndex/blob/master/LICENSE)
+This repository is licensed under the "MIT" license. See [MIT license](https://github.com/meokullu/GetScaleIndex/blob/master/LICENSE).
 
-### Authors
-Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
+### Authors & Contributing
+
+If you'd like to contribute, then contribute. <!-- [contributing guide](CONTRIBUTING.md). -->
+
+[![Contributors](https://contrib.rocks/image?repo=meokullu/GetScaleIndex)](https://github.com/meokullu/GetScaleIndex/graphs/contributors)
 
 ### Help
 Twitter: Enes Okullu [@enesokullu](https://twitter.com/EnesOkullu)
