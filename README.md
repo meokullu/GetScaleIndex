@@ -44,7 +44,7 @@ This repository is licensed under the "MIT" license. See [MIT license](https://g
 
 ### Authors & Contributing
 
-If you'd like to contribute, then contribute. <!-- [contributing guide](CONTRIBUTING.md). -->
+If you'd like to contribute, then contribute. [contributing guide](https://github.com/meokullu/GetScaleIndex/blob/master/CONTRIBUTING.md).
 
 [![Contributors](https://contrib.rocks/image?repo=meokullu/GetScaleIndex)](https://github.com/meokullu/GetScaleIndex/graphs/contributors)
 
