@@ -8,7 +8,7 @@
     <SignAssembly>False</SignAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Get Scale Index</Title>
-    <Version>1.0.0-alpha.3</Version>
+    <Version>1.0.0-alpha.4</Version>
     <Company>Enes Okullu</Company>
     <Description>GetScaleIndex, integer based index finder for scaling.</Description>
     <Copyright>Enes Okullu</Copyright>
