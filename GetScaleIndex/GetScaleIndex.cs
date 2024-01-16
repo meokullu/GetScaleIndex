@@ -300,7 +300,7 @@ namespace GetScaleIndex
             }
 
             //
-            int offset = (index / (width * height) * (customScale * (customScale - 1))) + (index * customScale);
+            int offset = (index / width * (customScale * (customScale - 1)) * height) + (index * customScale);
 
             //
             int[] scaledList = new int[customScale * customScale];
