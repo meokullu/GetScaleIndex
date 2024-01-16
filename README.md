@@ -15,19 +15,19 @@ SetHeight(int height)
 SetWidth(int width)
 ```
 ```
-GetIndexFor4X(int index)
+GetScalingIndexFor4X(int index)
 ```
 ```
-GetIndexFor9X(int index)
+GetScalingIndexFor9X(int index)
 ```
 ```
-GetIndexFor16X(int index)
+GetScalingIndexFor16X(int index)
 ```
 ```
-GetIndexFor25X(int index)
+GetScalingIndexFor25X(int index)
 ```
 ```
-GetIndexFor36X(int index)
+GetScalingIndexFor36X(int index)
 ```
 ```
 GetCustomScalingIndex(int index, int width, int height, int customScale)

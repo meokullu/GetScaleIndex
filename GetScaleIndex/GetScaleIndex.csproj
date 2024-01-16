@@ -8,16 +8,18 @@
     <SignAssembly>False</SignAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Get Scale Index</Title>
-    <Version>1.0.0-alpha.4</Version>
+    <Version>1.0.0-alpha.5</Version>
     <Company>Enes Okullu</Company>
     <Description>GetScaleIndex, integer based index finder for scaling.</Description>
     <Copyright>Enes Okullu</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>
-      v1.0.0-alpha.4
-      * New design README.
-      * New design CHANGELOG.
+      v1.0.0-alpha.5
+      * `ApplyScale&lt;T&gt;(List&lt;T&gt;list, int width, int height, int customScale)` method is added for generic list of generic data type.
+      * `width` and `height` values should be same for `ApplyScale&lt;T&gt;()` and `GetCustomScalingIndex()` methods. Temporarily value checking is added.
+      * `GetIndexFor4x(int index)` renamed as `GetScalingIndexFor4x(int index)`
+      * Variables renamed to enhance readability.
       See changelog (https://github.com/meokullu/GetScaleIndex/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <AssemblyVersion>1.0.0</AssemblyVersion>

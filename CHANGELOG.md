@@ -11,6 +11,16 @@
 #### Removed
 -->
 
+### [1.0.0-alpha.5]
+
+### Added
+* `ApplyScale<T>(List<T> list, int width, int height, int customScale)` method is added for generic list of generic data type.
+* `width` and `height` values should be same for `ApplyScale<T>()` and `GetCustomScalingIndex()` methods. Temporarily value checking is added.
+
+### Changed
+* `GetIndexFor4x(int index)` renamed as `GetScalingIndexFor4x(int index)`
+* Variables renamed to enhance readability.
+
 ### [1.0.0-alpha.4]
 
 #### Changed

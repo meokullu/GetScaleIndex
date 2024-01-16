@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace GetScaleIndex
 {
     /// <summary>
     /// Scaling integers
     /// </summary>
-    public class GetScaleIndex
+    public partial class GetScaleIndex
     {
         // Height
         private static int s_height;
@@ -19,13 +21,11 @@ namespace GetScaleIndex
         /// <param name="height">Height of matrix.</param>
         public static void SetHeight(int height)
         {
-            //TODO: Value should ve indicated as two or more.
-
             // Checking if value is below two.
             if (height < 2)
             {
                 // Throwing an argument to indicate value must be two or higher.
-                throw new ArgumentException("height should be more than 2");
+                throw new ArgumentException("Height should be more than 2");
             }
 
             // Set height parameter.
@@ -38,25 +38,31 @@ namespace GetScaleIndex
         /// <param name="width">Width of matrix.</param>
         public static void SetWidth(int width)
         {
-            //TODO: Value should ve indicated as two or more.
-
             // Checking if value is below two.
             if (width < 2)
             {
                 // Throwing an argument to indicate value must be two or higher.
-                throw new ArgumentException("width should be more than 2");
+                throw new ArgumentException("Width should be more than 2");
             }
 
             // Set width parameter.
             s_width = width;
         }
 
+    }
+
+    /// <summary>
+    /// Temporary partial class. All methods will be obsolote under this section.
+    /// </summary>
+    public partial class GetScaleIndex
+    {
         /// <summary>
         /// Experimental method. [Do not use!]
         /// </summary>
         /// <param name="index">Index position of array.</param>
         /// <returns>Integer array.</returns>
-        public static int[] GetIndexFor4x(int index)
+
+        public static int[] GetScalingIndexFor4x(int index)
         {
             //
             int offset = (index / s_width * 2 * s_height) + (index * 2);
@@ -110,6 +116,7 @@ namespace GetScaleIndex
                 adding + (6 * s_height) + 2
             };
 
+            //
             return list;
         }
 
@@ -273,7 +280,10 @@ namespace GetScaleIndex
             //
             return list;
         }
+    }
 
+    public partial class GetScaleIndex
+    {
         /// <summary>
         /// Experimental method. [Do not use!]
         /// </summary>
@@ -284,11 +294,16 @@ namespace GetScaleIndex
         /// <returns>Integer array.</returns>
         public static int[] GetCustomScalingIndex(int index, int width, int height, int customScale)
         {
-            //
-            int adding = (index / width * customScale * (customScale - 1) * height) + (index * customScale);
+            if (width != height)
+            {
+                throw new NotSupportedException("width and height should be match for current version.");
+            }
 
             //
-            int[] list = new int[customScale * customScale];
+            int offset = (index / (width * height) * (customScale * (customScale - 1))) + (index * customScale);
+
+            //
+            int[] scaledList = new int[customScale * customScale];
 
             //
             int innerIndex = 0;
@@ -300,7 +315,7 @@ namespace GetScaleIndex
                 for (int j = 0; j < customScale; j++)
                 {
                     // i: Vertical shift. j: Horizontally shift.
-                    list[innerIndex] = adding + (i * customScale * height) + j;
+                    scaledList[innerIndex] = offset + (i * customScale * height) + j;
 
                     //
                     innerIndex++;
@@ -308,7 +323,52 @@ namespace GetScaleIndex
             }
 
             //
-            return list;
+            return scaledList;
+        }
+
+        /// <summary>
+        /// Experimental method. [Do not use!]
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="customScale"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public static List<T> ApplyScale<T>(List<T> list, int width, int height, int customScale)
+        {
+            if (width != height)
+            {
+                throw new NotSupportedException("width and height should be match for current version.");
+            }
+
+            //
+            List<T> result = new List<T>(list.Count * customScale * customScale);
+
+            //
+            for (int i = 0; i < list.Count * customScale * customScale; i++)
+            {
+                //
+                result.Add(list[0]);
+            }
+
+            //
+            for (int i = 0; i < list.Count; i++)
+            {
+                //
+                int[] scalingIndexList = GetCustomScalingIndex(index: i, width: width, height: height, customScale: customScale);
+
+                //
+                foreach (var item in scalingIndexList)
+                {
+                    //
+                    result[item] = list[i];
+                }
+            }
+
+            // Returning result
+            return result;
         }
     }
 }
