@@ -436,6 +436,5 @@ namespace GetScaleIndex
             //
             return result;
         }
-    }
-    }
+    }    
 }
