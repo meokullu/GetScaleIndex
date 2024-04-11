@@ -45,7 +45,6 @@
 * Added minimum value checking into `SetHeight()` and `SetWidth()` methods. 
 
 ### [1.0.0-alpha.1]
-
 #### Added
 * Added licence file.
 * Readme file is filled.
