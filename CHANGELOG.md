@@ -11,6 +11,11 @@
 #### Removed
 -->
 
+### [1.0.0-alpha.7]
+#### Added
+* `ApplyScale<T>(T[] array, int width, int height, int customScale)` method is added.
+* `AppleScale<T>(T[] array, int width, int height, int customScale, ParallelOptions parallelOptions)` method is added.
+
 ### [1.0.0-alpha.6]
 #### Changed
 * Fixing a bug on calculation of offset value on `GetCustomScaleIndex(int index, int width, int height, int customScale)` method.
