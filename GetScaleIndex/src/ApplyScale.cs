@@ -116,5 +116,75 @@ namespace GetScaleIndex
             //
             return result;
         }
+
+        // Width
+
+        /// <summary>
+        /// Experimental method. [Do not use!]
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="widthScale"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public static T[] ApplyScaleByWidth<T>(T[] array, int width, int height, int widthScale)
+        {
+            //
+            T[] result = new T[array.Length * widthScale];
+
+            //
+            for (int i = 0; i < array.Length; i++)
+            {
+                //
+                int[] scalingIndexList = GetScaleIndexByWidth(index: i, width: width, height: height, widthScale: widthScale);
+
+                //
+                for (int j = 0; j < scalingIndexList.Length; j++)
+                {
+                    //
+                    result[scalingIndexList[j]] = array[i];
+                }
+            }
+
+            //
+            return result;
+        }
+
+        // Height
+
+        /// <summary>
+        /// Experimental method. [Do not use!]
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="heightScale"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public static T[] ApplyScaleByHeight<T>(T[] array, int width, int height, int heightScale)
+        {
+            //
+            T[] result = new T[array.Length * heightScale];
+
+            //
+            for (int i = 0; i < array.Length; i++)
+            {
+                //
+                int[] scalingIndexList = GetScaleIndexByHeight(index: i, width: width, height: height, heightScale: heightScale);
+
+                //
+                for (int j = 0; j < scalingIndexList.Length; j++)
+                {
+                    //
+                    result[scalingIndexList[j]] = array[i];
+                }
+            }
+
+            //
+            return result;
+        }
     }
 }

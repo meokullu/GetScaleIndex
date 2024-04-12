@@ -11,6 +11,14 @@
 #### Removed
 -->
 
+### [1.0.0-alpha.9]
+#### Added
+* `AppleScaleByWidth<T>(T[] array, int width, int height, int widthScale)` method is added.
+* `ApplyScaleByHeight<T>(T[] array, int witdh, int height, int heightScale)` method is added.
+
+#### Removed
+* `GetCustomScalingIndexV2(int index, int width, int height, int widthScale, int heightScale)` method is removed.
+
 ### [1.0.0-alpha.8]
 #### Changed
 * Splitting methods by their usages on files.

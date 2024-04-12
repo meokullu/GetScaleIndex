@@ -195,5 +195,95 @@ namespace GetScaleIndex
         }
 
         #endregion Point
+
+        #region Old methods
+
+        /// <summary>
+        /// Experimental method. [Do not use!]
+        /// </summary>
+        /// <param name="index">Index position of array.</param>
+        /// <param name="width">Width of matrix.</param>
+        /// <param name="height">Height of matrix.</param>
+        /// <param name="customScale">Scaling</param>
+        /// <returns>Integer array.</returns>
+        public static int[] GetCustomScalingIndex(int index, int width, int height, int customScale)
+        {
+            if (width != height)
+            {
+                throw new NotSupportedException("width and height should be match for current version.");
+            }
+
+            //
+            int offset = (index / width * customScale * (customScale - 1) * height) + (index * customScale);
+
+            //
+            int[] scaledList = new int[customScale * customScale];
+
+            //
+            int innerIndex = 0;
+
+            //
+            for (int i = 0; i < customScale; i++)
+            {
+                //
+                for (int j = 0; j < customScale; j++)
+                {
+                    // i: Vertical shift. j: Horizontally shift.
+                    scaledList[innerIndex] = offset + (i * customScale * height) + j;
+
+                    //
+                    innerIndex++;
+                }
+            }
+
+            //
+            return scaledList;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="customScale"></param>
+        /// <returns></returns>
+        public static int[] GetCustomScalingIndex(int[] list, int width, int height, int customScale)
+        {
+            //
+            int[] scaledList = new int[list.Length * customScale * customScale];
+
+            //
+            int offset;
+
+            //
+            int innerIndex = 0;
+
+            //
+            for (int i = 0; i < list.Length; i++)
+            {
+                //
+                offset = (i / width * height * (customScale * (customScale - 1))) + (i * customScale);
+
+                //
+                for (int j = 0; j < customScale; j++)
+                {
+                    //
+                    for (int m = 0; m < customScale; m++)
+                    {
+                        //
+                        scaledList[innerIndex] = offset + (j * customScale * height) + m;
+
+                        //
+                        innerIndex++;
+                    }
+                }
+            }
+
+            //
+            return scaledList;
+        }
+
+        #endregion Old methods
     }
 }
