@@ -8,17 +8,15 @@
     <SignAssembly>False</SignAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Get Scale Index</Title>
-    <Version>1.0.0-alpha.7</Version>
+    <Version>1.0.0-alpha.8</Version>
     <Company>Enes Okullu</Company>
     <Description>GetScaleIndex, integer based index finder for scaling.</Description>
     <Copyright>Enes Okullu</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>
-      v1.0.0-alpha.7
-      * `ApplyScale&lt;T&gt;(T[] array, int width, int height, int customScale)` method is added for generic type array of generic data type.
-      * `ApplyScale&lt;T&gt;(T[] array, int width, int height, int customScale, ParallelOptions parallelOptions)` method is added for generic type array of generic data type with parallelism.
-
+      v1.0.0-alpha.8
+      * Splitting methods by their usages on files.
       See changelog (https://github.com/meokullu/GetScaleIndex/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <AssemblyVersion>1.0.0</AssemblyVersion>

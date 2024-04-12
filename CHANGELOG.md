@@ -11,6 +11,10 @@
 #### Removed
 -->
 
+### [1.0.0-alpha.8]
+#### Changed
+* Splitting methods by their usages on files.
+
 ### [1.0.0-alpha.7]
 #### Added
 * `ApplyScale<T>(T[] array, int width, int height, int customScale)` method is added.
