@@ -8,30 +8,6 @@ GetScaleIndex is a package to scale index position.
 ### Description
 
 ### Example Usage
-```
-SetHeight(int height)
-```
-```
-SetWidth(int width)
-```
-```
-GetScalingIndexFor4X(int index)
-```
-```
-GetScalingIndexFor9X(int index)
-```
-```
-GetScalingIndexFor16X(int index)
-```
-```
-GetScalingIndexFor25X(int index)
-```
-```
-GetScalingIndexFor36X(int index)
-```
-```
-GetCustomScalingIndex(int index, int width, int height, int customScale)
-```
 
 ### Version History
 See [Changelog](https://github.com/meokullu/GetScaleIndex/blob/master/CHANGELOG.md)
