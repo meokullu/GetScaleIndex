@@ -11,6 +11,10 @@
 #### Removed
 -->
 
+### [1.0.0-alpha.10]
+#### Removed
+* `SetHeight(int height)`, `SetWidth(int width)`, `GetScalingIndexFor4x(int index)`, `GetScalingIndexFor9X(int index)`, `GetScalingIndexFor16x(int index)`, `GetScalingIndexFor25x(int index)` and `GetScalingIndexFor36x(int index)` methods are removed.
+
 ### [1.0.0-alpha.9]
 #### Added
 * `AppleScaleByWidth<T>(T[] array, int width, int height, int widthScale)` method is added.
