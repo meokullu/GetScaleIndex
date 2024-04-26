@@ -8,14 +8,14 @@
     <SignAssembly>False</SignAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Get Scale Index</Title>
-    <Version>1.0.0-alpha.10</Version>
+    <Version>1.0.0-alpha.8</Version>
     <Company>Enes Okullu</Company>
     <Description>GetScaleIndex, integer based index finder for scaling.</Description>
     <Copyright>Enes Okullu</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>
-      v1.0.0-alpha.10
+      v1.0.0-alpha.8
       Certain methods used for static calculations are removed.
       See changelog (https://github.com/meokullu/GetScaleIndex/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
